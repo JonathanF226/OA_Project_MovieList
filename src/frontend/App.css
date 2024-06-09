@@ -1,0 +1,16 @@
+.movies-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0 20px; 
+}
+
+.movies-list .card {
+    margin-bottom: 20px;
+    background-color: rgb(97, 114, 123); 
+    border-radius: 10px; 
+    border: none; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    color: black; 
+}
+
