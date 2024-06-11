@@ -1,12 +1,12 @@
 import express from "express";
-import { getMovieDetailsController, getPopularMoviesController } from "../controllers/MovieController.js";
+import { getPopularTVShowsController, getTVShowDetailsController } from "../controllers/TVController.js";
 
 const router = express.Router();
 
-router.get("/popularMovies", async (req, res) => {
+router.get("/popularTVShows", async (req, res) => {
     try{
-        const movies = await getPopularMoviesController();
-        res.send(movies)
+        const shows = await getPopularTVShowsController();
+        res.send(shows)
     } catch (e){
         console.log(e);
         res.status(500).send("Internal Server Error");
@@ -15,8 +15,8 @@ router.get("/popularMovies", async (req, res) => {
 
 router.get("/:id", async (req, res) => {
     try {
-        const movieDetails = await getMovieDetailsController(req.params.id);
-        res.send(movieDetails);
+        const tvShowDetails = await getTVShowDetailsController(req.params.id);
+        res.send(tvShowDetails)
     } catch (e) {
         console.log(e);
         res.status(500).send('Internal Server Error');

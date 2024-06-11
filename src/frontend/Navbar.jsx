@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
@@ -8,7 +9,7 @@ function NavScrollExample() {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container fluid>
-        <Navbar.Brand href="#">Movies</Navbar.Brand>
+        <Navbar.Brand as={Link} to="/">Movies</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -16,8 +17,8 @@ function NavScrollExample() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Favorites</Nav.Link>
-            <Nav.Link href="#action2">Watch Later</Nav.Link>
+            <Nav.Link as={Link} to="/tvshows">TV Shows</Nav.Link>
+            <Nav.Link as={Link} to="/watchlater">Watch Later</Nav.Link>
           </Nav>
           <Form className="d-flex">
             <Form.Control

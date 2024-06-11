@@ -8,7 +8,7 @@ const MoviesList = () => {
     useEffect(() => {
         const fetchMovies = async () => {
           try{
-            const response = await fetch('http://localhost:3000/movies/popularMovies');
+            const response = await fetch('http://localhost:3001/movies/popularMovies');
             if(!response.ok){
                 throw new Error(`Error!`);
             }
@@ -23,9 +23,10 @@ const MoviesList = () => {
 
     return (
         <div className="movies-list">
-            {movies.map((movie, index) => (
+            {movies.map((movie) => (
                 <CustomCard
-                    key={index}
+                    key={movie.id}
+                    id={movie.id}
                     title={movie.title}
                     image={`https://image.tmdb.org/t/p/w154${movie.posterPath}`}
                     rating={movie.rating}

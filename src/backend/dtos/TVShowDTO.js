@@ -1,9 +1,9 @@
-export class MovieDTO {
-    constructor(id, title, rating, releaseDate, posterPath){
+export class TVShowDTO {
+    constructor(id, title, rating, airDate, posterPath){
         this.id = id;
         this.title = title;
         this.rating = rating;
-        this.releaseDate = releaseDate;
+        this.airDate = airDate;
         this.posterPath = posterPath;
     }
 }
