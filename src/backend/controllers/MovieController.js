@@ -7,3 +7,7 @@ export const getPopularMoviesController = async () => {
 export const getMovieDetailsController = async (id) => {
     return await getMovieDetails(id)
 }
+
+export const autocompleteMoviesController = async (query) => {
+    return await autocompleteMovies(query);
+}

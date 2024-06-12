@@ -23,4 +23,17 @@ router.get("/:id", async (req, res) => {
     }
 });
 
+router.get("/autocomplete", async (req, res) => {
+    const { query } = req.query;
+    try {
+        const autocompleteResults = await autocompleteMovies(query);
+        res.json(autocompleteResults);
+    } catch (error) {
+        console.error('Error fetching autocomplete suggestions:', error);
+        res.status(500).send('Internal Server Error');
+    }
+});
+
+
+
 export default router;
