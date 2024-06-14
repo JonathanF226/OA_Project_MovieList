@@ -34,6 +34,4 @@ router.get("/autocomplete", async (req, res) => {
     }
 });
 
-
-
 export default router;

@@ -65,7 +65,7 @@ function NavScrollExample() {
             navbarScroll
           >
             <Nav.Link href="/tvshows">TV Shows</Nav.Link>
-            <Nav.Link href="/favorites">Favorites</Nav.Link>
+            <Nav.Link href="/favorite">Favorites</Nav.Link>
           </Nav>
           <Form className="d-flex" onSubmit={handleSearch}>
             <Form.Control

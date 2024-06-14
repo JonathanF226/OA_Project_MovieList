@@ -16,7 +16,7 @@ const CustomCard = ({ id, title, image, rating, releaseDate }) => {
         },
         {
           headers: {
-            'Content-Type': 'application/json' // Specify the Content-Type header
+            'Content-Type': 'application/json' 
           }
         }
       );

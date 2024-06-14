@@ -8,16 +8,15 @@ router.get("/", async (req, res) => {
         const favorites = await getFavoritesController();
         res.status(200).json(favorites); 
     } catch (error) {
-        console.error(error.message); // Log the error message
+        console.error(error.message); 
         res.status(500).send("Internal Server Error");
     }
 });
 
+
 router.post("/insertFavorite", async (req, res) => {
     try {
-        console.log('Request Body:', req.body);
         const { movieId, name } = req.body;
-        console.log('Request Body:', req.body);
         await addFavoriteController(movieId, name);
         res.status(201).send('Movie/TV show added to favorites successfully.');
     } catch (error) {
@@ -26,15 +25,15 @@ router.post("/insertFavorite", async (req, res) => {
     }
 });
 
-// router.delete("/deleteFavorite/:id", async (req, res) => {
-//     try {
-//         const { id } = req.params;
-//         await removeFavoriteController(id);
-//         res.status(200).send('Movie/TV show removed from favorites successfully.');
-//     } catch (error) {
-//         console.error(error);
-//         res.status(500).send("Internal Server Error");
-//     }
-// });
+router.delete("/deleteFavorite/:id", async (req, res) => {
+    try {
+        const { id } = req.params;
+        await removeFavoriteController(id);
+        res.status(200).send('Movie/TV show removed from favorites successfully.');
+    } catch (error) {
+        console.error(error);
+        res.status(500).send("Internal Server Error");
+    }
+});
 
 export default router;
