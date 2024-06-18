@@ -1,17 +1,31 @@
 import express from "express";
-import { getMovieDetailsController, getPopularMoviesController } from "../controllers/MovieController.js";
+import { getMovieDetailsController, getPopularMoviesController, getSearchMovieController } from "../controllers/MovieController.js";
 
 const router = express.Router();
 
 router.get("/popularMovies", async (req, res) => {
-    try{
-        const movies = await getPopularMoviesController();
-        res.send(movies)
-    } catch (e){
+    const { page } = req.query; 
+    try {
+        const movies = await getPopularMoviesController(page);
+        res.send(movies);
+    } catch (e) {
         console.log(e);
         res.status(500).send("Internal Server Error");
     }
 });
+
+
+router.get("/searchMovies", async (req, res) => {
+    const { query, page } = req.query;
+    try {
+        const results = await getSearchMovieController(query, page);
+        res.send(results);
+    } catch (e) {
+        console.error(e);
+        res.status(500).send(`Internal Server Error: ${e}`);
+    }
+});
+
 
 router.get("/:id", async (req, res) => {
     try {
@@ -19,17 +33,6 @@ router.get("/:id", async (req, res) => {
         res.send(movieDetails);
     } catch (e) {
         console.log(e);
-        res.status(500).send('Internal Server Error');
-    }
-});
-
-router.get("/autocomplete", async (req, res) => {
-    const { query } = req.query;
-    try {
-        const autocompleteResults = await autocompleteMovies(query);
-        res.json(autocompleteResults);
-    } catch (error) {
-        console.error('Error fetching autocomplete suggestions:', error);
         res.status(500).send('Internal Server Error');
     }
 });
