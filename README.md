@@ -1,6 +1,7 @@
 # OA_Project_MovieList
 The Movie List Application is a web-based platform aimed at movie enthusiasts to browse, search, and save their favorite movies.
 
+Link to a full demo: https://youtu.be/YINtQuj6VmU
 
 
 https://github.com/JonathanF226/OA_Project_MovieList/assets/13626416/2a65e65d-0c65-458f-b0fd-51e4cdd25a69
