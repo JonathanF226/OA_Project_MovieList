@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import CustomCardTV from './TVCard';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
 
 const TVList = () => {
     const [shows, setShows] = useState([]);

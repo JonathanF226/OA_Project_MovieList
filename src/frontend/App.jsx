@@ -5,6 +5,9 @@ import TVList from "./TVList";
 import TVDetails from "./TVDetails";
 import Favorites from "./Favorites";
 import Navbar from './Navbar.jsx';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
+import './Details.css';
 
 function App() {
   

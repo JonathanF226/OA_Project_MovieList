@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
 
 const MovieDetails = () => {
     const { id } = useParams();
@@ -24,7 +22,7 @@ const MovieDetails = () => {
     }, [id]);
 
     return (
-        <div>
+        <div className='details-container'>
             <h1>{movie.title}</h1>
             <p>Release Date: {movie.releaseDate}</p>
             <p>Rating: {movie.rating}</p>

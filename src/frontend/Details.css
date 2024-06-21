@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #474747;
+    color: #a1a1a1;
+    margin: 0;
+    padding: 0;
+}
+
+.details-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #000000;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.details-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #a1a1a1;
+}
+
+.details-container p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #a4a4a4;
+}
+
+.details-container img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.details-container .overview {
+    text-align: left;
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+.details-container .popularity {
+    margin-top: 10px;
+    font-weight: bold;
+}

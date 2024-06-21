@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
 
 const TVDetails = () => {
     const { id } = useParams();
@@ -24,7 +22,7 @@ const TVDetails = () => {
     }, [id]);
 
     return (
-        <div>
+        <div className='details-container'>
             <h1>{show.title}</h1>
             <p>Release Date: {show.airDate}</p>
             <p>Rating: {show.rating}</p>

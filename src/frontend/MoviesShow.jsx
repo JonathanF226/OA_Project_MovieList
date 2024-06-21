@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import CustomCard from './Card';
-import './App.css';
 
 const MoviesShow = () => {
     const [movies, setMovies] = useState([]); 
